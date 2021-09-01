@@ -20,9 +20,17 @@ const amarelo = () => {
 }
 
 const automatico = () => {
-    document.getElementById("semaforo-desligado").src = "img/vermelho.png"
-    document.getElementById("semaforo-desligado").src = "img/verde.png"
-    document.getElementById("semaforo-desligado").src = "img/amarelo.png"   
+    const automatico = document.getElementById("automatico")
+    if (automatico.textContent = "Automático") {
+        idVermelho = setInterval(vermelho, 500)
+        idAmarelo = setInterval (amarelo, 1000)
+        idVerde = setInterval (verde, 1500)
+        automatico.textContent= "Parar"
+    }else {
+        parar ()
+        parar.textContent = "Parar"
+    }
+   
 }
 
 const parar = () => {
