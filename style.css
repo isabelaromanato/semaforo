@@ -36,6 +36,7 @@ button {
     cursor: pointer;
     width: 80px;
     height: 30px;
+    border-radius: 5px;
 }
 
 #vermelho {

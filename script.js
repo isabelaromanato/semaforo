@@ -21,22 +21,29 @@ const amarelo = () => {
 
 const automatico = () => {
     const automatico = document.getElementById("automatico")
-    if (automatico.textContent = "Automático") {
-        idVermelho = setInterval(vermelho, 500)
-        idAmarelo = setInterval (amarelo, 1000)
-        idVerde = setInterval (verde, 1500)
+    if (automatico.textContent == "Automático") {
+       idVermelho = setInterval ( intercalarCores, 1500 )
         automatico.textContent= "Parar"
     }else {
         parar ()
-        parar.textContent = "Parar"
+        automatico.textContent = "Automático"
     }
    
 }
 
+function intercalarCores () {
+  setTimeout(vermelho, 500)
+       setTimeout (amarelo, 1000)
+        setTimeout (verde, 1500)
+
+}
+
+
 const parar = () => {
-    clearInterval(idAmarelo)
-    clearInterval(idVerde)
-    clearInterval(idAmarelo)
+    clearInterval(idVermelho)
+    // clearInterval(idVerde)
+    // clearInterval(idAmarelo)
+    
 }
 
 //eventos 
